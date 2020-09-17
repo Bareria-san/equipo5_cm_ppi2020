@@ -43,6 +43,9 @@ color:white;
   background-color: bisque;
 }
 
+.btn-tcc:active{
+  background-color: bisque;
+}
 
 @keyframes logo-spin {
   from {
