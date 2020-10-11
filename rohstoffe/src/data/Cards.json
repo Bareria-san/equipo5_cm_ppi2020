@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.linio.com/p/1cd084a8ef846e3fcad08d56e77ea074-product.jpg",
+        "nombre" : "Calvin Klein",
+        "descrip": "Nonmbe papá, no te imaginas lo que te vas a echar."
+    },
+    {
+        "id": 2,
+        "img": "https://falabella.scene7.com/is/image/FalabellaCO/4079203_1?wid=1500&hei=1500&qlt=70",
+        "nombre" : "Hugo Boss",
+        "descrip": "Nahh, si la de antes estaba buena, ahora imagínate esta mi rey"
+    }
+]
