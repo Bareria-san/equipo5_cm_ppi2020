@@ -229,3 +229,11 @@ span:after {
   color: darkred;
   transition-delay: 1100ms;
 }
+
+.letra {
+
+  margin-left: 30%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  color: black;
+}

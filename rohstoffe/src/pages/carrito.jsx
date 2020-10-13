@@ -1,5 +1,8 @@
 import React from 'react';
+import Image from '../components/1.jpg'
 import '../App.css';
+
+
 
 window.onload = function () {
     // Variables
@@ -8,25 +11,25 @@ window.onload = function () {
             id: 1,
             nombre: 'Lacoste Red',
             precio: 10000,
-            imagen: 'https://source.unsplash.com/random/500x500/?potato&sig=1'
+            imagen: 'https://es.swedishface.com/image/cache/data/lacoste/lacoste-eau-de-lacoste-red-edt-100ml-900x900.jpg'
         },
         {
             id: 2,
             nombre: 'One Million',
             precio: 10000,
-            imagen: 'https://source.unsplash.com/random/500x500/?onion&sig=2'
+            imagen: 'https://es.swedishface.com/image/cache/data/paco-rabanne/paco-rabanne-1-million-edt-100ml-900x900.jpg'
         },
         {
             id: 3,
             nombre: 'Ck One',
             precio: 16000,
-            imagen: 'https://source.unsplash.com/random/500x500/?zucchini&sig=3'
+            imagen: 'https://cdn.shopify.com/s/files/1/0050/9761/9505/products/perfume-ck-one-unisex-de-calvin-klein-200ml-803408_1200x1200.jpg?v=1601488606'
         },
         {
             id: 4,
-            nombre: 'Moon Sparkle',
+            nombre: 'Invictus',
             precio: 28000,
-            imagen: 'https://source.unsplash.com/random/500x500/?burrs&sig=4'
+            imagen: 'https://www.724usa.com/paco-rabanne-invictus-legend-edt-100-ml-for-men-perfume-original-tester-perfume-men-fragrances-paco-rabanne-724usacom-men-women-clothing-shoes-accessories-online-shopping-475345-43-B.jpg'
         }
 
     ]
@@ -39,9 +42,11 @@ window.onload = function () {
 
     // Funciones
     function renderItems() {
+
         for (let info of baseDeDatos) {
             // Estructura
             let miNodo = document.createElement('div');
+
             miNodo.classList.add('card', 'col-sm-4');
             // Body
             let miNodoCardBody = document.createElement('div');
@@ -71,8 +76,11 @@ window.onload = function () {
             miNodoCardBody.appendChild(miNodoBoton);
             miNodo.appendChild(miNodoCardBody);
             $items.appendChild(miNodo);
+
         }
     }
+
+
 
     function anyadirCarrito() {
         // Anyadimos el Nodo a nuestro carrito
@@ -160,26 +168,30 @@ window.onload = function () {
     renderItems();
 }
 
+
+
 class Carrito extends React.Component {
     render() {
-    return (
-    < body >
-    <div class="container">
-        <div class="row">
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="letra">
+                        <div class="row justify-content-center justify-content-md-start">
+                            <h1 class="display-3">Carrito de compra</h1>
+                        </div>
+                    </div>
+                    <main id="items" class="col-sm-8 row"></main>
 
-            <main id="items" class="col-sm-8 row"></main>
+                    <aside class="col-sm-4">
+                        <h2>Carrito</h2>
 
-            <aside class="col-sm-4">
-                <h2>Carrito</h2>
-
-                <ul id="carrito" class="list-group"></ul>
-                <p class="text-right">Total: $ <span id="total"></span></p>
-                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-            </aside>
-        </div>
-    </div>
-</body>
-  );
-}
+                        <ul id="carrito" class="list-group"></ul>
+                        <p class="text-right">Total: $ <span id="total"></span></p>
+                        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                    </aside>
+                </div>
+            </div>
+        );
+    }
 }
 export default Carrito;
