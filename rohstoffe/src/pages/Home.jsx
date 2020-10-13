@@ -4,17 +4,18 @@ import Layout from '../components/Layout';
 import Card from '../components/cardpro';
 import Cards from '../data/Cards.json';
 
-class Inicio extends Component {
+class Home extends Component {
   constructor() {
     super();
     this.state = {data: Cards};
   }
  render (){
   return (
-    <div >
-    <Layout/>
+    <div className="container-fluid">
       <div className="row">
-    <Card data={this.state.data} />
+    <Layout/>
+    <h1 class="display-3 col-12 text-dark bg-info">Catálogo</h1>
+      <Card data={this.state.data} />
     </div>
     </div>
   );
@@ -22,4 +23,4 @@ class Inicio extends Component {
 }
 
 
-export default Inicio;
+export default Home;
