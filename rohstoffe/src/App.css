@@ -237,3 +237,22 @@ span:after {
   margin-top: 5%;
   color: black;
 }
+
+.card {
+ 
+  margin-bottom: 5%;
+  margin-right: 5%;
+}
+
+.text-right {
+
+  font-size: 20px;
+  color: darkmagenta;
+
+}
+
+.items {
+
+  background-color: black;
+
+}

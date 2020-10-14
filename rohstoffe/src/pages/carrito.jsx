@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from '../components/1.jpg'
 import '../App.css';
 
 
@@ -65,7 +64,7 @@ window.onload = function () {
             miNodoPrecio.textContent = '$' + info['precio'];
             // Boton 
             let miNodoBoton = document.createElement('button');
-            miNodoBoton.classList.add('btn', 'btn-primary');
+            miNodoBoton.classList.add('btn', 'btn-secondary');
             miNodoBoton.textContent = '+';
             miNodoBoton.setAttribute('marcador', info['id']);
             miNodoBoton.addEventListener('click', anyadirCarrito);
@@ -92,7 +91,7 @@ window.onload = function () {
     }
 
     function renderizarCarrito() {
-        // Vaciamos todo el html
+        // Vaciamos todo
         $carrito.textContent = '';
         // Quitamos los duplicados
         let carritoSinDuplicados = [...new Set(carrito)];
