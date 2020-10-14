@@ -3,17 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Rutas from './routes/routes'
 import * as serviceWorker from './serviceWorker';
+import Aplicacion from './routers/Aplicacion';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Rutas />
+
+    <Aplicacion/>
   </React.StrictMode>,
   document.getElementById('root')
 );
  
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a1f642dd2e23f4125f65a6ccc085c7f7c3503f26
 serviceWorker.unregister();
