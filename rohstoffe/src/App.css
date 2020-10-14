@@ -1,7 +1,8 @@
 .App {
-  text-align: center;
+  text-align:left ;
 }
 
+<<<<<<< HEAD
 .logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,6 +15,23 @@
     animation: logo-spin infinite 20s linear;
   }
 }*/
+=======
+.App-logo {
+  height:660px;
+  pointer-events: none;
+  padding: 3%;
+}
+.desk-title{
+  text-align: left;
+  font-size: 75px;
+}
+.nav-false{
+  height: 120px;
+  width: 970px;
+  
+  
+}
+>>>>>>> a1f642dd2e23f4125f65a6ccc085c7f7c3503f26
 
 .App-header {
   
@@ -39,6 +57,7 @@ color:white;
   margin-left: 50px;
 }
 
+<<<<<<< HEAD
 .btn-tcc:hover{
   background-color: bisque;
 }
@@ -229,4 +248,10 @@ span:after {
   color: darkred;
   transition-delay: 1100ms;
 }
+=======
+.App-link {
+  color: #000000;
+}
+
+>>>>>>> a1f642dd2e23f4125f65a6ccc085c7f7c3503f26
 
