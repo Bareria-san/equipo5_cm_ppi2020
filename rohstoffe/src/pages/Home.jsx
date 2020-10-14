@@ -14,9 +14,12 @@ class Home extends Component {
     <div className="container-fluid">
       <div className="row">
     <Layout/>
-    <h1 class="display-3 col-12 text-dark bg-info">Catálogo</h1>
+    <div className="col-12 d-flex justify-content-center">
+      <h1 className="display-3">Catálogo</h1>
+    </div>
       <Card data={this.state.data} />
     </div>
+    <h1>.</h1>
     </div>
   );
  }
