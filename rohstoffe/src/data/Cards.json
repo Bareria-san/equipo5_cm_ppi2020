@@ -10,5 +10,23 @@
         "img": "https://falabella.scene7.com/is/image/FalabellaCO/4079203_1?wid=1500&hei=1500&qlt=70",
         "nombre" : "Hugo Boss",
         "descrip": "Nahh, si la de antes estaba buena, ahora imagínate esta mi rey"
+    },
+    {
+        "id": 3,
+        "img": "https://es.swedishface.com/image/cache/data/lacoste/lacoste-eau-de-lacoste-red-edt-100ml-900x900.jpg",
+        "nombre" : "Lacoste Red",
+        "descrip": "Nahh, si la de antes estaba buena, ahora imagínate esta mi rey"
+    },
+    {
+        "id": 4,
+        "img": "https://es.swedishface.com/image/cache/data/paco-rabanne/paco-rabanne-1-million-edt-100ml-900x900.jpg",
+        "nombre" : "One Million",
+        "descrip": "Nahh, si la de antes estaba buena, ahora imagínate esta mi rey"
+    },
+    {
+        "id": 5,
+        "img": "https://www.724usa.com/paco-rabanne-invictus-legend-edt-100-ml-for-men-perfume-original-tester-perfume-men-fragrances-paco-rabanne-724usacom-men-women-clothing-shoes-accessories-online-shopping-475345-43-B.jpg",
+        "nombre" : "Invictus",
+        "descrip": "Nahh, si la de antes estaba buena, ahora imagínate esta mi rey"
     }
 ]

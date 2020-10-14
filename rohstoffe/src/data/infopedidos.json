@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "comprador": "Juan Bodoque",
+        "direccion": "Cl. 48C #95-138",
+        "producto": "Lacoste Red",
+        "precio": "$10,000",
+        "estado": ""
+    }
+]

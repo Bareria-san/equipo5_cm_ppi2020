@@ -10,7 +10,7 @@ class FooterCliente extends Component {
         <li class="nav-item">
               <h7 class="nav-link text-dark" >
                 <Link to="/añadir" className="text-dark">
-                  Añadir productos
+                  Añadir
             </Link>
               </h7>
             </li>
@@ -23,8 +23,8 @@ class FooterCliente extends Component {
             </li>
             <li class="nav-item">
               <h7 class="nav-link text-dark" >
-                <Link to="/estadocomprador" className="text-dark">
-                  Estado de las entregas
+                <Link to="/pedidos" className="text-dark">
+                  Pedidos
             </Link>
               </h7>
             </li>

@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Insigniapages from '../pages/insigniaPages';
 import Carrito from '../pages/carrito';
 import Home from '../pages/Home';
+import Favoritos from '../pages/favoritos';
+import Pedidos from '../pages/pedidos';
 import Todospaca from "../pages/todospaca";
 import Estado from "../pages/estado";
 import Productos from "../pages/productos";
@@ -24,6 +26,8 @@ function Routes() {
                 <Route exact path='/productos' component={Productos} />
                 <Route exact path='/añadir' component={Añadir} />
                 <Route exact path='/estadocomprador' component={EstadoComprador} />
+                <Route exact path='/favoritos' component={Favoritos} />
+                <Route exact path='/pedidos' component={Pedidos} />
 
             </Switch>
         </BrowserRouter>

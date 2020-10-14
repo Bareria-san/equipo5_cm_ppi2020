@@ -8,7 +8,11 @@ class Futer extends Component {
       <footer className="Container"><div class="fixed-bottom">
         <ul class="nav justify-content-center bg-light">
           <li class="nav-item float-left ">
-            <a class="nav-link active text-dark" href="https://getbootstrap.com/docs/4.5/components/navs/">Favoritos</a>
+          <h7 class="nav-link text-dark" >
+              <Link to="/favoritos" className="text-dark">
+              Favortios
+            </Link>
+            </h7>
           </li>
           <li class="nav-item">
             <h7 class="nav-link text-dark" >
