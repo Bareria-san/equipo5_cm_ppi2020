@@ -6,7 +6,7 @@ import Home from '../pages/Home';
 import Todospaca from "../pages/todospaca";
 
 
-function Aplicacion() {
+function Routes() {
     return (
         <BrowserRouter>
             <Switch>
@@ -19,4 +19,4 @@ function Aplicacion() {
     );
 }
 
-export default Aplicacion;
+export default Routes;
