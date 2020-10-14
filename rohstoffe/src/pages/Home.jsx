@@ -13,6 +13,7 @@ class Home extends Component {
   return (
     <div className="container-fluid">
       <div className="row">
+      <h1>.</h1>
     <Layout/>
     <div className="col-12 d-flex justify-content-center">
       <h1 className="display-3">Catálogo</h1>

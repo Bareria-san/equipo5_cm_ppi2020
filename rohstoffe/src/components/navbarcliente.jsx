@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class Navbaar extends Component {
+class NavbarCliente extends Component {
   render() {
     return (
       
@@ -17,10 +17,10 @@ class Navbaar extends Component {
         <a class="nav-link" href="d">Perfil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="d">Historial</a>
+        <a class="nav-link" href="d">Pedidos Activos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href='/Estado'>Estado del pedido</a>
+        <a class="nav-link" href='/Estado'>Productos</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -34,4 +34,4 @@ class Navbaar extends Component {
   }
 }
 
-export default Navbaar;
+export default NavbarCliente;

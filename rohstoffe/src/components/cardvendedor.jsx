@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import '../App.css';
 
-export default class Card extends Component {
+export default class Cardvendedor extends Component {
   render() {
     return (
       <>
@@ -13,7 +14,6 @@ export default class Card extends Component {
                 <h5 className="card-stock">{element.Stock}</h5>
                 <p className="card-text">{element.descrip}</p>
               </div>
-              <a href="https://getbootstrap.com/docs/4.5/components/card/" class="btn btn-primary">Añadir al kart</a>
             </div>
           </div>
               ))}

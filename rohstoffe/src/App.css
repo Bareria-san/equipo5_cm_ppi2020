@@ -254,7 +254,7 @@ span:after {
 
   margin-left: 30%;
   margin-bottom: 5%;
-  margin-top: 5%;
+  margin-top: 10%;
   color: black;
 }
 
@@ -262,6 +262,12 @@ span:after {
  
   margin-bottom: 5%;
   margin-right: 5%;
+  margin-left: 5%;
+}
+
+#items {
+
+  margin-right: -10%;
 }
 
 .text-right {
@@ -271,8 +277,40 @@ span:after {
 
 }
 
-.items {
+#boton-vaciar {
 
-  background-color: black;
+  margin-right: 50%;
+  margin-top: 5%;
+
+}
+
+#boton-continuar {
+
+  margin-top: 5%;
+}
+
+.icono{
+  margin-left: -50%;
+  margin-top: 30%;
+  margin-right: 60%;
+  width: 128px; 
+  height: 128px;
+
+}
+
+.names {
+
+  margin-top: 3%;
+  margin-left: -20%;
+  }
+
+.form {
+  margin-top: 2%;
+  
+}
+
+.display-3 {
+
+  margin-top: 1%;
 
 }

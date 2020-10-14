@@ -1,7 +1,6 @@
 import React from 'react';
 import '../App.css';
-
-
+import Layout from '../components/Layout';
 
 window.onload = function () {
     // Variables
@@ -74,7 +73,9 @@ window.onload = function () {
             miNodoCardBody.appendChild(miNodoPrecio);
             miNodoCardBody.appendChild(miNodoBoton);
             miNodo.appendChild(miNodoCardBody);
+            if ($items){
             $items.appendChild(miNodo);
+            }
 
         }
     }
@@ -159,21 +160,25 @@ window.onload = function () {
         renderizarCarrito();
         calcularTotal();
     }
-
+    if($botonVaciar)
+    {
+        
     // Eventos
     $botonVaciar.addEventListener('click', vaciarCarrito);
 
+    }
     // Inicio
     renderItems();
+    
+
 }
-
-
 
 class Carrito extends React.Component {
     render() {
         return (
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row">
+                <Layout />
                     <div className="letra">
                         <div class="row justify-content-center justify-content-md-start">
                             <h1 class="display-3">Carrito de compra</h1>
@@ -181,12 +186,18 @@ class Carrito extends React.Component {
                     </div>
                     <main id="items" class="col-sm-8 row"></main>
 
-                    <aside class="col-sm-4">
+                    <aside class="col-sm-5">
                         <h2>Carrito</h2>
 
                         <ul id="carrito" class="list-group"></ul>
                         <p class="text-right">Total: $ <span id="total"></span></p>
-                        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+
+                        <div className="col-13 d-flex justify-content-center">
+                        
+                            <button id="boton-vaciar"  class="btn btn-danger">Vaciar</button>
+                            <a href="/estado" id="boton-continuar" class="btn btn-info">Continuar</a>
+    
+                        </div>
                     </aside>
                 </div>
             </div>

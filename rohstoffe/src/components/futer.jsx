@@ -12,14 +12,14 @@ class Futer extends Component {
           </li>
           <li class="nav-item">
             <h7 class="nav-link text-dark" >
-              <Link to="/" className="text-dark">
+              <Link to="/home" className="text-dark">
               Inicio
             </Link>
             </h7>
           </li>
           <li class="nav-item">
           <h7 class="nav-link text-dark" >
-              <Link to="/aca" className="text-dark">
+              <Link to="/carrito" className="text-dark">
               Carrito
             </Link>
             </h7>
