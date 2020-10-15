@@ -10,7 +10,7 @@ class Futer extends Component {
           <li class="nav-item float-left ">
           <h7 class="nav-link text-dark" >
               <Link to="/favoritos" className="text-dark">
-              Favortios
+              Favoritos
             </Link>
             </h7>
           </li>
