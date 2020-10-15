@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import Title from './components/Title/Title'
+import Title from '../Login/components/Title/Title'
 import Logo from '../assets/img/Logo.png'
-import './SingUp.css' 
-import Label from './components/Label/Label';
-import Input from './components/Input/Input';
+import './SignUp.css' 
+import Label from '../Login/components/Label/Label';
+import Input from '../Login/components/Input/Input';
 //import Label from './components/Label/Label'
-const SingUp  = () => {
+const SignUp  = () => {
 
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
@@ -88,4 +88,4 @@ const SingUp  = () => {
     )
 }
 
-export default SingUp;
+export default SignUp;

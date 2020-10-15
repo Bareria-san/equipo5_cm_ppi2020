@@ -1,0 +1,341 @@
+.App {
+  text-align:left ;
+}
+
+.logo {
+  height: 40vmin;
+  pointer-events: none;
+  margin-top: 10vmin;
+  margin-bottom: 9vmin;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
+  }*/
+
+.App-logo {
+  height:660px;
+  pointer-events: none;
+  padding: 3%;
+}
+.desk-title{
+  text-align: left;
+  font-size: 75px;
+}
+.nav-false{
+  height: 120px;
+  width: 970px;
+  
+  
+}
+
+.App-header {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  color: black;
+}
+
+.btn-tcc-spacing 
+{
+margin-top: 25vmin;
+margin-right: 50px;
+margin-bottom: 50px;
+font-size: 20px;
+color:white;
+}
+
+.btn-tcc{
+  background-color:black;
+  margin-left: 50px;
+}
+
+.btn-tcc:hover{
+  background-color: bisque;
+}
+
+.btn-tcc:active{
+  background-color: bisque;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Saira+Semi+Condensed");
+body {
+  font-family: "Saira Semi Condensed", sans-serif;
+}
+
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  margin-top: 20vmin;
+}
+
+.first-container, .second-container {
+  cursor: pointer;
+  position: relative;
+}
+.first-container h1, .second-container h1 {
+  position: relative;
+  letter-spacing: 2px;
+  font-size: 3vw;
+}
+
+.first-container {
+  margin-bottom: 15px;
+}
+
+span {
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+}
+span:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  transition: 0.6s;
+  z-index: -5;
+}
+
+.share:hover > h1 > span:nth-child(1):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 100ms;
+  transform: rotate(-25deg);
+}
+
+.share:hover > h1 > span:nth-child(1) {
+  color:darkred;
+  transition-delay: 110ms;
+}
+
+.share:hover > h1 > span:nth-child(2):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 200ms;
+  transform: rotate(-20deg);
+}
+
+.share:hover > h1 > span:nth-child(2) {
+  color: darkred;
+  transition-delay: 220ms;
+}
+
+.share:hover > h1 > span:nth-child(3):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 300ms;
+  transform: rotate(-15deg);
+}
+
+.share:hover > h1 > span:nth-child(3) {
+  color: darkred;
+  transition-delay: 330ms;
+}
+
+.share:hover > h1 > span:nth-child(4):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 400ms;
+  transform: rotate(-10deg);
+}
+
+.share:hover > h1 > span:nth-child(4) {
+  color:darkred;
+  transition-delay: 440ms;
+}
+
+.share:hover > h1 > span:nth-child(5):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 500ms;
+  transform: rotate(-5deg);
+}
+
+.share:hover > h1 > span:nth-child(5) {
+  color:darkred;
+  transition-delay: 550ms;
+}
+
+.share:hover > h1 > span:nth-child(6):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 600ms;
+  transform: rotate(0deg);
+}
+
+.share:hover > h1 > span:nth-child(6) {
+  color: darkred;
+  transition-delay: 660ms;
+}
+
+.share:hover > h1 > span:nth-child(7):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 700ms;
+  transform: rotate(5deg);
+}
+
+.share:hover > h1 > span:nth-child(7) {
+  color: darkred;
+  transition-delay: 770ms;
+}
+
+.share:hover > h1 > span:nth-child(8):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 800ms;
+  transform: rotate(10deg);
+}
+
+.share:hover > h1 > span:nth-child(8) {
+  color: darkred;
+  transition-delay: 880ms;
+}
+
+.share:hover > h1 > span:nth-child(9):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 900ms;
+  transform: rotate(15deg);
+}
+
+.share:hover > h1 > span:nth-child(9) {
+  color:darkred;
+  transition-delay: 990ms;
+}
+
+.share:hover > h1 > span:nth-child(10):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 1000ms;
+  transform: rotate(20deg);
+}
+
+.share:hover > h1 > span:nth-child(10) {
+  color: darkred;
+  transition-delay: 1100ms;
+}
+
+.App-link {
+  color: #000000;
+}
+
+
+.letra {
+
+  margin-left: 30%;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  color: black;
+}
+
+.card {
+ 
+  margin-bottom: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+#items {
+
+  margin-right: -10%;
+}
+
+.text-right {
+
+  font-size: 20px;
+  color: darkmagenta;
+
+}
+
+#boton-vaciar {
+
+  margin-right: 50%;
+  margin-top: 5%;
+
+}
+
+#boton-continuar {
+
+  margin-top: 5%;
+}
+
+.icono{
+  margin-left: -50%;
+  margin-top: 30%;
+  margin-right: 60%;
+  width: 128px; 
+  height: 128px;
+
+}
+
+.names {
+
+  margin-top: 3%;
+  margin-left: -20%;
+  }
+
+.form {
+  margin-top: 2%;
+  
+}
+
+.display-3 {
+
+  margin-top: 1%;
+
+}
+
+#Texto_inicio{
+  justify-content: center;
+  color: #000000;
+  display: flex;
+  font-size: 50px;
+}
+
+#btn_direccion{
+  margin-top: 40px;
+  margin-right: 30%;
+}
+
+#btn_monto{
+  margin-left: 60%;
+  margin-top: -65px;
+}
+
+#Bloque_inicio{
+
+  margin-top: 3%;
+  margin-left: 35%;
+
+
+}
