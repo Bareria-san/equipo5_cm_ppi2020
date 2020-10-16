@@ -4,7 +4,7 @@ import './Label.css';
 const Label = ({ text }) => {
     return (
         <div>
-            <label> {text} </label>
+            <label className = 'xdx'> {text} </label>
         </div>
     )
 };

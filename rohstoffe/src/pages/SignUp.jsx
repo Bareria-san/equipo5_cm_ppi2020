@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import Title from '../Login/components/Title/Title'
 import Logo from '../assets/img/Logo.png'
-import './SignUp.css' 
+import '../Login/SignUp.css' 
 import Label from '../Login/components/Label/Label';
 import Input from '../Login/components/Input/Input';
+import {Link} from 'react-router-dom';
 //import Label from './components/Label/Label'
 const SignUp  = () => {
 
@@ -84,6 +85,17 @@ const SignUp  = () => {
         }}
         handleChange={handleChange}
         />
+        <Link>
+        <button onClick={handleSumit} className='Ok'>
+                Registrarse
+        </button>
+        </Link>
+        <Link>
+        <button onClick={handleCancel} className= 'cancel'>
+                Cancelar
+        </button>
+        </Link>
+
     </div>
     )
 }

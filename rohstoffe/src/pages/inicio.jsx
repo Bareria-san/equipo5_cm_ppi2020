@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../App.css';
 import logo from '../components/logom.png';
 
@@ -19,12 +20,18 @@ function App() {
     </div>
     
         <div className="App-buttons">
-          <button type="button" class="btn btn-tcc btn-lg btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing">
+        <Link to= '/login' className= 'text-white'>
+            <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing" href=''>
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Registrarse
-          </button>
-          <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing" href=''>
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Iniciar Sesión
-          </button>
+            </button>
+            </Link>
+          
+            <Link to= '/login' className= 'text-white'>
+            <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing" href=''>
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Iniciar sesión
+            </button>
+            </Link>
+          
         </div>
 
       </header>

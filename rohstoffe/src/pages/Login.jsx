@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Login.css'
+import { Link } from 'react-router-dom';
+import '../Login/Login.css';
 import Logo from '../assets/img/Logo.png';
 import Title from '../Login/components/Title/Title'
 import Label from '../Login/components/Label/Label'
@@ -15,10 +16,11 @@ const Login = () => {
     function handleChange(name, value) {
         if (name === 'usuario') {
             setUser(value)
-        } else {
-            setPassword(value)
-        }
-    };
+        }else {
+                setPassword(value);
+            }
+            
+            };
 
     function handleSumit() {
         let account = { user, password }
@@ -37,7 +39,7 @@ const Login = () => {
         <div className='login-container'>
             <img src={Logo} className='Logo' alt='Logo' />
             <Title text='Inicia sesión' />
-            <Label text='Nombre de usuario' />
+            <Label text='Nombre de usuario*' />
             <Input
                 attribute={{
                     id: 'usuario',
@@ -47,24 +49,27 @@ const Login = () => {
                 }}
                 handleChange={handleChange}
             />
-            <Label text='Contraseña' />
+            <Label text='Contraseña*' />
             <Input
                 attribute={{
                     id: 'contraseña',
                     name: 'contraseña',
                     type: 'password',
-                    placeholder: 'Ingrese su contraseña'
+                    placeholder: 'Mínimo 5 caracteres'
                 }}
                 handleChange={handleChange}
             />
             <button onClick={handleSumit} className='Ok'>
                 Ingresar
             </button>
+            <Link to= '/'>
             <button onClick={handleCancel} className='cancel'>
                 Cancelar
             </button>
+            </Link>
             <Label text='¿Aún no tiene cuenta?'/>
             <button className= 'here'>Registrate aquí</button>
+            <a>Campos obligatorios marcados con *</a>
         </div>
     )
 
