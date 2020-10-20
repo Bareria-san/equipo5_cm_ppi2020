@@ -10,6 +10,8 @@ app.get('/',(req,res) => {
     res.send('Servidor Rohstoffe equipo 5 Activo');
 });
 
+app.use("/api/", require("./routesco/inicio"))
+
 app.set("puerto", 3000)
 
 app.listen(app.get("puerto"), () => {
