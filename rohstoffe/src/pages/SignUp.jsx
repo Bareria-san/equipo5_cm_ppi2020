@@ -90,7 +90,7 @@ const SignUp  = () => {
                 Registrarse
         </button>
         </Link>
-        <Link>
+        <Link to= '/'>
         <button onClick={handleCancel} className= 'cancel'>
                 Cancelar
         </button>
