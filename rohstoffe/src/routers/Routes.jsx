@@ -11,13 +11,17 @@ import Productos from "../pages/productos";
 import Añadir from '../pages/añadir';
 import EstadoComprador from '../pages/estadocomprador';
 import App from '../pages/inicio';
-
+import Carritop from '../pages/carritop';
+import Login from '../pages/Login';
+import SignUp from '../pages/SignUp';
 
 function Routes() {
     return (
         <BrowserRouter>
             <Switch>
                 <Route exact path='/' component={App} />
+                <Route exact path='/signup' component={SignUp}/>
+                <Route exact path='/login' component = {Login} />
                 <Route exact path='/carrito' component={Carrito} />
                 <Route exact path='/Estado' component={Estado} />
                 <Route exact path='/home' component={Home} />
@@ -28,6 +32,7 @@ function Routes() {
                 <Route exact path='/estadocomprador' component={EstadoComprador} />
                 <Route exact path='/favoritos' component={Favoritos} />
                 <Route exact path='/pedidos' component={Pedidos} />
+                <Route exact path='/carritop' component={Carritop} />
 
             </Switch>
         </BrowserRouter>

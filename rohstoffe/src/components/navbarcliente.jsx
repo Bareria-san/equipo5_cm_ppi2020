@@ -16,12 +16,12 @@ class NavbarCliente extends Component {
       <li class="nav-item">
         <a class="nav-link" href="d">Perfil</a>
       </li>
-      <li class="nav-item">
+      {/* <li class="nav-item">
         <a class="nav-link" href="d">Pedidos Activos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href='/Estado'>Productos</a>
-      </li>
+      </li> */}
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"/>
