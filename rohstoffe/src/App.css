@@ -54,6 +54,7 @@ color:white;
 .btn-tcc{
   background-color:black;
   margin-left: 50px;
+  top: 20%;
 }
 
 .btn-tcc:hover{
@@ -80,11 +81,11 @@ body {
 
 .main-container {
   position: absolute;
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
-  margin-top: 20vmin;
+  margin-top: 12vmin;
+  
 }
 
 .first-container, .second-container {
@@ -292,14 +293,14 @@ span:after {
   margin-top: 5%;
 }
 
-.icono{
+/* .icono{
   margin-left: -50%;
   margin-top: 30%;
   margin-right: 100%;
-  width: 50vmin; 
+  width: 50vmin;  
   height: 50vmin;
 
-  }
+  } */
 
 .form {
   margin-top: 2%;

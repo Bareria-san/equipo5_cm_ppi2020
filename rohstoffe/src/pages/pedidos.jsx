@@ -16,7 +16,7 @@ export default class Pedidos extends Component {
       <h1>.</h1>
     <Layout2/>
     <div className="col-12 d-flex justify-content-center">
-      <h1 className="display-4">Pedidos de tus clientes</h1>
+      <h1 className="display-5">Pedidos de tus clientes</h1>
     </div>
       <Infopedidoss data={this.state.data} />
     </div>

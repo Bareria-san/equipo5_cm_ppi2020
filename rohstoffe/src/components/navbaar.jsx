@@ -20,7 +20,7 @@ class Navbaar extends Component {
         <a class="nav-link" href="d">Historial</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href='/Estado'>Estado del pedido</a>
+        <a class="nav-link" href='/estadocomprador'>Estado del pedido</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

@@ -18,9 +18,9 @@ class Productos extends Component {
     <div className="col-12 d-flex justify-content-center">
       <h1 className="display-3">Productos</h1>
     </div>
-    <div className="col-12 d-flex justify-content-center">
+    
     <Cardvendedor data={this.state.data} />
-    </div>
+    
      
     </div>
     <h1>.</h1>

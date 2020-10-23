@@ -8,8 +8,9 @@ function App() {
     <div className="App">
       <header className="App-header">
 
+        
+        <div>
         <img src={logo} className="logo" alt="logo" />
-
         <div class="main-container">
           <div class="first-container share">
             <h1><span id="one">Bi</span><span>en</span><span>ve</span><span>ni</span><span>dos</span></h1>
@@ -18,19 +19,17 @@ function App() {
             <h1><span>Elige</span><span>una</span><span>opción</span><span>para</span><span> continuar</span></h1>
           </div>
         </div>
-
-
-
+        </div>
       </header>
-      <div className="App-buttons d-inline-block">
+      <div className="App-buttons d-inline-block mx-auto mt-2">
         <Link to='/signup' className='text-white'>
-          <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing m-2" href=''>
+          <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing mx-2" href=''>
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Registrarse
             </button>
         </Link>
 
         <Link to='/login' className='text-white'>
-          <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing m-2" href=''>
+          <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing mx-2" href=''>
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Iniciar sesión
             </button>
         </Link>

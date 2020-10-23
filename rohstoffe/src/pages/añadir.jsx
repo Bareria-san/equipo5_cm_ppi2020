@@ -11,7 +11,7 @@ class Añadir extends Component {
                         <h1>.</h1>
                         <Layout2 />
                         <div className="col-12 d-flex justify-content-center">
-                            <h1 className="display-3">Añadir productos</h1>
+                            <h1 className="display-5">Añadir productos</h1>
                         </div>
                         <div className="col-12 d-flex justify-content-center">
                             <div className="form">
