@@ -60,7 +60,7 @@ const Login = () => {
                 handleChange={handleChange}
             />
             <button onClick={handleSumit} type="button" className="Ok" data-toggle="modal" data-target="#exampleModal">
-                                    Registrarse</button>
+                                    Iniciar sesión</button>
 
 
                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

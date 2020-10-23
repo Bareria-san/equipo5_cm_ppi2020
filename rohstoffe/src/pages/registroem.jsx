@@ -75,9 +75,10 @@ const Registroem = () => {
         }}
         handleChange={handleChange}
         />
+        <div className='login-container'>
         <Label text='Adjunte el Certificado de autenticidad*'/>
         <input type="file" class="form-control-file" id="exampleFormControlFile1"></input>
-        
+        </div>
         <button onClick={handleSumit} type="button" className="Ok" data-toggle="modal" data-target="#exampleModal">
                                     Registrarse</button>
 

@@ -21,11 +21,10 @@ function App() {
         </div>
         </div>
       </header>
-<<<<<<< HEAD
-      <div className="App-buttons d-inline-block">
-        
-            <button className='dna' class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing m-2" type="button" data-toggle="modal" data-target="#exampleModal">
-                    Registrarse</button>
+      <div className="App-buttons d-inline-block mx-auto mt-2">
+      <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing mx-2"  data-toggle="modal" data-target="#exampleModal" href=''>
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Registrarse
+            </button>
 
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -46,15 +45,6 @@ function App() {
                         </div>
                     </div>
                 </div>
-        
-=======
-      <div className="App-buttons d-inline-block mx-auto mt-2">
-        <Link to='/signup' className='text-white'>
-          <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing mx-2" href=''>
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Registrarse
-            </button>
-        </Link>
->>>>>>> 8c2197f091c3ac9109f00119598d45463d56889b
 
         <Link to='/login' className='text-white'>
           <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing mx-2" href=''>
