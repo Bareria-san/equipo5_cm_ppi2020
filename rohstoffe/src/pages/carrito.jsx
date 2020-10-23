@@ -73,8 +73,8 @@ window.onload = function () {
             miNodoCardBody.appendChild(miNodoPrecio);
             miNodoCardBody.appendChild(miNodoBoton);
             miNodo.appendChild(miNodoCardBody);
-            if ($items){
-            $items.appendChild(miNodo);
+            if ($items) {
+                $items.appendChild(miNodo);
             }
 
         }
@@ -160,16 +160,15 @@ window.onload = function () {
         renderizarCarrito();
         calcularTotal();
     }
-    if($botonVaciar)
-    {
-        
-    // Eventos
-    $botonVaciar.addEventListener('click', vaciarCarrito);
+    if ($botonVaciar) {
+
+        // Eventos
+        $botonVaciar.addEventListener('click', vaciarCarrito);
 
     }
     // Inicio
     renderItems();
-    
+
 
 }
 
@@ -178,7 +177,7 @@ class Carrito extends React.Component {
         return (
             <div className="container-fluid">
                 <div className="row">
-                <Layout />
+                    <Layout />
                     <div className="letra">
                         <div class="row justify-content-center justify-content-md-start">
                             <h1 class="display-3">Carrito de compra</h1>
@@ -193,16 +192,36 @@ class Carrito extends React.Component {
                         <p class="text-right">Total: $ <span id="total"></span></p>
 
                         <div className="col-13 d-flex justify-content-center">
-                        
-                            <button id="boton-vaciar"  class="btn btn-danger">Vaciar</button>
-                            <a href="/carritop" id="boton-continuar" class="btn btn-info">Continuar</a>
-                        </div>
 
+                            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                            <button id="boton-continuar" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                                Continuar</button>
+
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">¿Continuar?</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">¿Está seguro de que desea continuar?
+
+                                            </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                            <a href="/carritop"> <button type="button" class="btn btn-primary">Continuar</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </aside>
                 </div>
             </div>
 
-            
+
         );
     }
 }
