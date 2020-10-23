@@ -80,7 +80,7 @@ const Registroem = () => {
                 Registrarse
         </button>
         </Link>
-        <Link to= '/home'>
+        <Link to= '/'>
         <button onClick={handleCancel} className= 'cancel'>
                 Cancelar
         </button>
