@@ -37,13 +37,14 @@ class Añadir extends Component {
                                     <label for="exampleFormControlFile1">Imagen del producto</label>
                                     <input type="file" class="form-control-file" id="exampleFormControlFile1"></input>
                                 </div>
-
-                                <button type="submit" class="btn btn-secondary">Añadir</button>
+                                <a href="http://www.blob.cl" data-confirm="¿Total y completamente seguro de eliminar?">
+                                <button type="submit" class="btn btn-secondary">Añadir<span class="glyphicon glyphicon-remove-sign"></span></button>
+                                </a>
                             </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         );
     }
 }
