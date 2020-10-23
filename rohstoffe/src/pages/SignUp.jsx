@@ -76,11 +76,28 @@ const SignUp  = () => {
         }}
         handleChange={handleChange}
         />
-        <Link to='/home'>
-        <button onClick={handleSumit} className='Ok'>
-                Registrarse
-        </button>
-        </Link>
+        <button onClick={handleSumit} type="button" className="Ok" data-toggle="modal" data-target="#exampleModal">
+                                    Registrarse</button>
+
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">Se ha registrado satisfactoriamente
+
+                                            </div>
+                                            <div class="modal-footer">
+                                               <a href="/home"> <button type="button" class="btn btn-primary">Continuar</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
         <Link to= '/'>
         <button onClick={handleCancel} className= 'cancel'>
                 Cancelar

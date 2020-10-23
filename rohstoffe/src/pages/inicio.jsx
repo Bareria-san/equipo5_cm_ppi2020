@@ -23,11 +23,30 @@ function App() {
 
       </header>
       <div className="App-buttons d-inline-block">
-        <Link to='/signup' className='text-white'>
-          <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing m-2" href=''>
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Registrarse
-            </button>
-        </Link>
+        
+            <button className='dna' class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing m-2" type="button" data-toggle="modal" data-target="#exampleModal">
+                    Registrarse</button>
+
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Seleccione el tipo de registro</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-footer">
+                               <a href="/registroem"> <button type="button" className="secundario" data-dismiss="modal">Cancelar</button></a>
+                               <div className='btnregistro'>
+                               <a href="/registroem"><button type="button" class='btn btn-primary'>Como empresa</button></a></div><a href="/signup"> <button type="button" class="btn btn-primary">Como comprador</button></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
 
         <Link to='/login' className='text-white'>
           <button type="button" class="btn btn-tcc btn-color btn-bg-color btn-sm col-xs-2 btn-tcc-spacing m-2" href=''>

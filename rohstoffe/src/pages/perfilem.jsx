@@ -1,21 +1,28 @@
 import React from 'react';
 import Perfil from '../assets/img/Perfil.jpg'
-import Layout from '../components/Layout';
+import Layout2 from '../components/Layout2';
 import '../App.css'
-const PerfilCo = () => {
+import Certificado from '../assets/img/Certificado.jpg'
+const PerfilEm = () => {
     return (
         <div className='container'>
             <div>
                 <h1>.</h1>
-                <Layout />
+                <Layout2 />
                 <div className='profile-container'>
                     <img src={Perfil} className='asdasd' alt='Logo' />
                 </div>
-                <h1 className='display-4'>Cristian Usme</h1>
-                <h2 className='sos'>Comprador</h2>
-                <h4 className='sos'>jdfgcuc@gmail.com</h4>
+                <h1 className='display-5'>Lili Perfumeria</h1>
+                <h2 className='sos'>Carlos Ferrer</h2>
+                <h4 className='sos'>Liliperfu@gmial.com</h4>
+                <h4 className='sos'>4444444</h4>
+                <h4 className='sos'>Calle 94 #30-1, Medellín</h4>
+                <h4 className='sos'>Certificado de autenticidad:</h4>
+                <div className='cont'>
+                    <img src={Certificado} className='asdasd' alt='Logo' />
+                </div>
 
-                <button className='dnd' type="button"  data-toggle="modal" data-target="#exampleModal">
+                <button className='dna' type="button" data-toggle="modal" data-target="#exampleModal">
                     Cerrar sesión</button>
 
 
@@ -37,8 +44,9 @@ const PerfilCo = () => {
                 </div>
             </div>
             <h1>.</h1>
+
         </div>
     )
 }
 
-export default PerfilCo;
+export default PerfilEm;

@@ -17,6 +17,7 @@ import SignUp from '../pages/SignUp';
 import Historial from '../pages/historial';
 import Registroem from '../pages/registroem';
 import PerfilCo from '../pages/perfilcomprador';
+import PerfilEm from '../pages/perfilem'
 
 function Routes() {
     return (
@@ -39,6 +40,7 @@ function Routes() {
                 <Route exact path='/pedidos' component={Pedidos} />
                 <Route exact path='/carritop' component={Carritop} />
                 <Route exact path='/historial' component={Historial} />
+                <Route exact path='/PerfilEm' component={PerfilEm} />
 
             </Switch>
         </BrowserRouter>

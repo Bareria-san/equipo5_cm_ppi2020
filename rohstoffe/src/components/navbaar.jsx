@@ -14,10 +14,10 @@ class Navbaar extends Component {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="d">Perfil</a>
+        <a class="nav-link" href="/perfilco">Perfil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="d">Historial</a>
+        <a class="nav-link" href="/historial">Historial</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href='/Estado'>Estado del pedido</a>

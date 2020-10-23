@@ -345,3 +345,66 @@ span:after {
   flex-direction: column;
   margin-top: 50px;
 }
+
+.profile-container{
+  display: flex;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  content: normal;
+}
+.sos{
+  display: flex;
+  justify-content: center;
+}
+.dnd{
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 20px;
+  background-color: black;
+  border-color: white;
+  position: relative;
+  left: 30%;
+  top: 5%;
+}
+.secundario{
+  display: flex;
+  position: relative;
+  right: 50%;
+  border-radius: 5px;
+}
+.asdasd{
+  display: flex;
+  justify-content: center;
+  height: 34vmin;
+  pointer-events: none;
+  position: relative;
+  
+  
+}
+.cont{
+  display: flex;
+  justify-content: center;
+}
+.dna{
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 20px;
+  background-color: black;
+  border-color: white;
+  position: relative;
+  left: 30%;
+  top: 2%; 
+}
+.btnregistro{
+  display: flex;
+
+  position: relative;
+  top: 5%;
+}
