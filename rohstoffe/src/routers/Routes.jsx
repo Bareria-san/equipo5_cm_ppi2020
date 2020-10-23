@@ -12,13 +12,16 @@ import Añadir from '../pages/añadir';
 import EstadoComprador from '../pages/estadocomprador';
 import App from '../pages/inicio';
 import Carritop from '../pages/carritop';
-
+import Login from '../pages/Login';
+import SignUp from '../pages/SignUp';
 
 function Routes() {
     return (
         <BrowserRouter>
             <Switch>
                 <Route exact path='/' component={App} />
+                <Route exact path='/signup' component={SignUp}/>
+                <Route exact path='/login' component = {Login} />
                 <Route exact path='/carrito' component={Carrito} />
                 <Route exact path='/Estado' component={Estado} />
                 <Route exact path='/home' component={Home} />

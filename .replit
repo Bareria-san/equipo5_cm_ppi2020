@@ -1,0 +1,5 @@
+language = "nodejs"
+#run = "cd backend-rohstoffe && npm run dev"
+#run = "cd backend-rohstoffe && npm i"
+#run = "cd rohstoffe && npm i"
+run = "cd rohstoffe && npm start"
