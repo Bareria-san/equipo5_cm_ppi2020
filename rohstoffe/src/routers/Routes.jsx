@@ -14,12 +14,17 @@ import App from '../pages/inicio';
 import Carritop from '../pages/carritop';
 import Login from '../pages/Login';
 import SignUp from '../pages/SignUp';
+import Historial from '../pages/historial';
+import Registroem from '../pages/registroem';
+import PerfilCo from '../pages/perfilcomprador';
 
 function Routes() {
     return (
         <BrowserRouter>
             <Switch>
+                <Route exact path='/registroem' component={Registroem}/>
                 <Route exact path='/' component={App} />
+                <Route exact path = '/perfilco' component={PerfilCo}/>
                 <Route exact path='/signup' component={SignUp}/>
                 <Route exact path='/login' component = {Login} />
                 <Route exact path='/carrito' component={Carrito} />
@@ -33,6 +38,7 @@ function Routes() {
                 <Route exact path='/favoritos' component={Favoritos} />
                 <Route exact path='/pedidos' component={Pedidos} />
                 <Route exact path='/carritop' component={Carritop} />
+                <Route exact path='/historial' component={Historial} />
 
             </Switch>
         </BrowserRouter>

@@ -59,16 +59,20 @@ const Login = () => {
                 }}
                 handleChange={handleChange}
             />
+            <Link to='/home'>
             <button onClick={handleSumit} className='Ok'>
                 Ingresar
             </button>
+            </Link>
             <Link to= '/'>
             <button onClick={handleCancel} className='cancel'>
                 Cancelar
             </button>
             </Link>
             <Label text='¿Aún no tiene cuenta?'/>
+            <Link to= '/signup'>
             <button className= 'here'>Registrate aquí</button>
+            </Link>
             <a>Campos obligatorios marcados con *</a>
         </div>
     )

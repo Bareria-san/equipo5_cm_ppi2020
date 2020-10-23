@@ -1,5 +1,7 @@
 .App {
   text-align:left ;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
@@ -104,6 +106,7 @@ span {
   position: relative;
   margin-right: 5px;
 }
+
 span:after {
   content: "";
   position: absolute;
@@ -292,16 +295,10 @@ span:after {
 .icono{
   margin-left: -50%;
   margin-top: 30%;
-  margin-right: 60%;
-  width: 128px; 
-  height: 128px;
+  margin-right: 100%;
+  width: 50vmin; 
+  height: 50vmin;
 
-}
-
-.names {
-
-  margin-top: 3%;
-  margin-left: -20%;
   }
 
 .form {
@@ -338,4 +335,23 @@ span:after {
   margin-left: 35%;
 
 
+}
+
+.contenedores{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.volveracomprar{
+  display: flex;
+  margin-left: 79%;
+}
+.precios{
+  border-radius: 30px;
+}
+.onlycards{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }

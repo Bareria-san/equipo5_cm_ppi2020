@@ -1,13 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Title from '../Login/components/Title/Title'
 import Logo from '../assets/img/Logo.png'
 import '../Login/SignUp.css' 
 import Label from '../Login/components/Label/Label';
 import Input from '../Login/components/Input/Input';
 import {Link} from 'react-router-dom';
-//import Label from './components/Label/Label'
-const SignUp  = () => {
 
+const Registroem = () => {
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
 
@@ -34,29 +33,29 @@ const SignUp  = () => {
     return (
     <div className = 'register-container'>
         <img src={Logo} className='Logo' alt='Logo' />
-        <Title text='Registrate' />
-        <Label text= 'Nombre completo' />
+        <Title text='Registra tu empresa' />
+        <Label text= 'Nombre de la empresa*' />
         <Input 
         attribute={{
             id: 'usuario',
             name: 'usuario',
             type: 'text',
-            placeholder: 'Ingrese su nombre'
+            placeholder: 'Nombre de empresa'
         }}
         handleChange={handleChange}
         />
 
-        <Label text= 'Correo electronico' />
+        <Label text= 'Correo empresarial*' />
         <Input 
         attribute={{
             id: 'usuario',
             name: 'usuario',
             type: 'text',
-            placeholder: 'Ingrese su correo'
+            placeholder: 'Digite el correo empresarial'
         }}
         handleChange={handleChange}
         />
-        <Label text= 'Contraseña' />
+        <Label text= 'Contraseña*' />
         <Input 
         attribute={{
             id: 'contraseña',
@@ -66,7 +65,7 @@ const SignUp  = () => {
         }}
         handleChange={handleChange}
         />
-        <Label text= 'Confirme su contraseña' />
+        <Label text= 'Confirme su contraseña*' />
         <Input 
         attribute={{
             id: 'Confirm-contraseña',
@@ -88,7 +87,8 @@ const SignUp  = () => {
         </Link>
         <a>Campos obligatorios marcados con *</a>
     </div>
+
     )
 }
 
-export default SignUp;
+export default Registroem;
