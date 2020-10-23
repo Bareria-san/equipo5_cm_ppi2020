@@ -14,7 +14,7 @@ class Estado extends React.Component {
                     <Layout />
                     <div className="letra">
                         <div class="row justify-content-center justify-content-md-start">
-                            <h1 class="display-3">Estado del pedido</h1>
+                            <h1 class="display-5">Estado del pedido</h1>
                         </div>
 
                         <div className="iconos">

@@ -179,8 +179,9 @@ class Carrito extends React.Component {
                 <div className="row">
                     <Layout />
                     <div className="letra">
+                        <h4>.</h4>
                         <div class="row justify-content-center justify-content-md-start">
-                            <h1 class="display-3">Carrito de compra</h1>
+                            <h1 class="display-5">Carrito de compra</h1>
                         </div>
                     </div>
                     <main id="items" class="col-sm-8 row"></main>
@@ -218,6 +219,7 @@ class Carrito extends React.Component {
                             </div>
                         </div>
                     </aside>
+                    <h1>.</h1>
                 </div>
             </div>
 

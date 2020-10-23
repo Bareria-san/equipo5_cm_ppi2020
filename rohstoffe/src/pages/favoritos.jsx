@@ -16,7 +16,7 @@ class Favoritos extends Component {
       <h1>.</h1>
     <Layout/>
     <div className="col-12 d-flex justify-content-center">
-      <h1 className="display-3">Mis perfumes favoritos</h1>
+      <h1 className="display-5">Mis perfumes favoritos</h1>
     </div>
       <Card data={this.state.data} />
     </div>

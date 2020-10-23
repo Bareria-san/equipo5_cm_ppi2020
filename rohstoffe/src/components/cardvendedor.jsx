@@ -13,7 +13,7 @@ export default class Cardvendedor extends Component {
                 <h5 className="card-title">{element.nombre}</h5>
                 <h5 className="card-stock">{element.Stock}</h5>
                 <p className="card-text">{element.descrip}</p>
-              </div>
+              </div> 
             </div>
           </div>
               ))}

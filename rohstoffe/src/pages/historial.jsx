@@ -10,7 +10,7 @@ const Historial = () => {
             <Layout/> 
             
             <div className='col-12 d-flex justify-content-center'>
-            <h1 className='display-4'>Historial de pedidos</h1>
+            <h1 className='display-5'>Historial de pedidos</h1>
             </div>
         <div class="accordion" id="accordionExample">
             <div className= 'onlycards'>

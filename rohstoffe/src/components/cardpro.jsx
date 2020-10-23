@@ -22,7 +22,7 @@ export default class Card extends Component {
               <div className="card-body">
                 <h5 className="card-title">{element.nombre}</h5>
                 <h5 className="card-stock">{element.Stock}</h5>
-                <p className="card-text">{element.descrip}</p>
+                <p className="card-text">{element.descrip}</p> 
                 <button class="btn btn-success" onClick={this.handleClick}>
                   {this.state.isToggleOn ? 'Fav' : 'No fav'}
                 </button>

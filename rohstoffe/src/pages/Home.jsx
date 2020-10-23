@@ -16,7 +16,7 @@ class Home extends Component {
       <h1>.</h1>
     <Layout/>
     <div className="col-12 d-flex justify-content-center">
-      <h1 className="display-3">Catálogo</h1>
+      <h1 className="display-5">Catálogo</h1>
     </div>
       <Card data={this.state.data} />
     </div>
