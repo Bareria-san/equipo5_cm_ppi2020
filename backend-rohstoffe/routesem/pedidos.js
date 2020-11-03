@@ -18,4 +18,16 @@ router.get("/pedidos/:id", (req,res) => {
       res.json(`El número de pedido ${id} no existe.`)
   })
 
+router.put("/pedidos/estadodelaentrega/:id", (req,res) => {
+  let id = req.params.id 
+  let {estado} = req.body
+
+  let pedidoModifcado = JSONPedidos.find(pedido => {
+    if(pedido.id == id){
+      pedido.entrega = entrega
+      return pedido
+    }
+  })
+})
+
 module.exports = router

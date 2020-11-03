@@ -10,12 +10,14 @@ router.get("/carritodecompra", (req, res) => {
 
 router.post("/carritodecompra", (req, res) => {
     let id = JSONCarrito.length + 1
-    let {precio, cantidad, total} = req.body
+    let {precio, cantidad, total, direccion, monto} = req.body
     let nuevoCarrito = {
       "id" : id,
       "precio": precio,
       "cantidad": cantidad,
-      "total": total
+      "total": total,
+      "direccion": direccion,
+      "monto": monto
     } 
     JSONCarrito.push(nuevoCarrito)
     fs.writeFileSync('./carrito.json', JSON.stringify(JSONCarrito), 'utf-8')
