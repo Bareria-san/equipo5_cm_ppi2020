@@ -1,5 +1,6 @@
 const {Router} = require("express")
 const router = Router()
+const {} = require("./../db/mysql")
 const fs = require("fs")
 const FilePedidos = fs.readFileSync('./carrito.json', 'utf-8')
 const JSONPedidos = JSON.parse(FilePedidos)
