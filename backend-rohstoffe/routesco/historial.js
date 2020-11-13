@@ -1,6 +1,7 @@
 const {Router} = require("express")
 const router = Router()
 const fs = require("fs")
+const {} = require("./../db/mysql")
 const FileHistorial = fs.readFileSync('./productos.json', 'utf-8')
 const JSONHistorial = JSON.parse(FileHistorial)
 

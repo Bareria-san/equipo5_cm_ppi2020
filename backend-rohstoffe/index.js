@@ -6,11 +6,15 @@ const app = express();
 app.use(morgan('dev'))
 app.use(express.json())
 
+
 app.get('/',(req,res) => {
     res.send('Servidor Rohstoffe equipo 5 Activo');
 });
 
 app.use("/api/", require("./routesco/inicio"))
+app.use("/api/", require("./routesco/carrito"))
+/*app.use("/api/", require("./routesem/comprador")) 
+app.use("/api/", require("./routesem/empresas")) */
 
 app.set("puerto", 3000)
 
