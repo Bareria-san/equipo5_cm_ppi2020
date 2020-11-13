@@ -50,7 +50,7 @@ router.post("/carritodecompra", (req, res) => {
       "precio": precio,
       "cantidad": cantidad,
       "total": total,
-      "direccion": direccion,
+      "direccion": direccion, 
       "monto": monto
     } 
     JSONCarrito.push(nuevoCarrito)
