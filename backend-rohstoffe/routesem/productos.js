@@ -9,7 +9,7 @@ router.get("/productos", (req, res) => {
   res.json(JSONProductos)
 })
 
-/*router.get("/productos/:id", (req,res) => {
+router.get("/productos/:id", (req,res) => {
     let id = req.params.id
     let ProductoEncontrado = JSONProductos.find(producto => producto.id == id)
   
@@ -17,6 +17,6 @@ router.get("/productos", (req, res) => {
       res.status(200).json(ProductoEncontrado)
     else
       res.json(`El producto con el ID ${id} no existe`)
-  })*/
+  })
 
 module.exports = router
