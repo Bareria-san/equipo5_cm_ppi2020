@@ -1,7 +1,21 @@
 const {Router} = require("express")
 const router = Router()
+const multer = require('multer')
+const path = require('path')
+const {v4 : uuidv4} = require('uuid')
 //const fs = require("fs")
-const {connection} = require("./../db/mysql")
+const {connection} = require("./../db/mysql_pool")
+
+const cargador = multer({
+  storage : multer.diskStorage({
+    destination : (req, file, cb) => {
+      cb(null, path.join(__dirname,'../public/uploads'))
+    },
+    filename : (req, file, cb) => {
+       cb(null, uuidv4() + path.extname(file.originalname));
+    }
+  })
+})
 
 router.post('/anadirproductos', (req, res) => {
   try{
@@ -33,6 +47,18 @@ router.post('/anadirproductos', (req, res) => {
   }catch(error){
     res.status(502).json({mensaje:"Error en el servidor"})
   }
+})
+
+router.post('/imagencita', cargador.single('imagen_producto'),(req, res) => {
+  res.json(req.file)
+  /*if(req.file){
+  const {id_producto} = req.body
+  const response = await connection.query(`UPDATE productos SET imagen_producto = ? WHERE id = ?`,
+  [JSON.stringify, req.file, id_producto])
+  console.log(response)
+  }else{
+    res.json({mensaje : "tu archivo no se cargó"})
+  }*/
 })
 /*router.post('/anadirproducto',(req,res)=>{
 const {

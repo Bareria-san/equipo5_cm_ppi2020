@@ -1,7 +1,7 @@
 const {Router} = require("express")
 const router = Router()
 const fs = require("fs")
-const {} = require("./../db/mysql")
+const {} = require("./../db/mysql_pool")
 const FileFavoritos = fs.readFileSync('./favoritos.json', 'utf-8')
 const JSONFavoritos = JSON.parse(FileFavoritos)
 
