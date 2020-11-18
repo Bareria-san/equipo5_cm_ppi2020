@@ -1,34 +1,33 @@
-const {Router} = require("express")
-const router = Router()
-const {} = require("./../db/mysql_pool")
-const fs = require("fs")
-const FilePedidos = fs.readFileSync('./carrito.json', 'utf-8')
-const JSONPedidos = JSON.parse(FilePedidos)
 
-router.get("/pedidos", (req, res) => {
-  res.json(JSONPedidos)
+const {Router} = require("express")
+const router = Router();
+const {connection} = require("./../db/mysql_pool")
+
+router.get('/pedidos',(req,res)=>{
+  try{
+    connection.query('SELECT * FROM carrito_de_compra',(err, row, fiels)=>{
+      if(!err){
+        console.log(err)
+      }
+      res.json(row)
+    })
+  }catch(error){
+    res.status(502).json({mensaje:"Error en la base de datos"})
+  }
 })
 
-router.get("/pedidos/:id", (req,res) => {
-    let id = req.params.id
-    let pedidoEncontrado = JSONPedidos.find(pedido => pedido.id == id)
-  
-    if(pedidoEncontrado != undefined)
-      res.status(206).json(pedidoEncontrado)
-    else
-      res.json(`El número de pedido ${id} no existe.`)
-  })
-
-router.put("/pedidos/estadodelaentrega/:id", (req,res) => {
-  let id = req.params.id 
-  let {estado} = req.body
-
-  let pedidoModifcado = JSONPedidos.find(pedido => {
-    if(pedido.id == id){
-      pedido.entrega = entrega
-      return pedido
-    }
-  })
+router.get('/pedidos/:id',(req,res)=>{
+  let {id} = req.params;
+  try{
+    connection.query('SELECT * FROM carrito_de_compra WHERE id_carrito = ?',[id],(err, row, fields)=>{
+      if(!err){
+        console.log(err)
+      }
+      res.json(row[0])
+    })
+  }catch(error){
+    res.status(502).json({mensaje:"Error en la base de datos"})
+  }
 })
 
 module.exports = router

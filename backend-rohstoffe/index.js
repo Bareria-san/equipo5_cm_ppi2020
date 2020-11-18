@@ -15,6 +15,9 @@ app.get('/',(req,res) => {
 app.use("/api/", require("./routesco/inicio"))
 app.use("/api/", require("./routesco/carrito"))
 app.use("/api/", require("./routesem/agregar"))
+app.use("/api/", require("./routesem/productos"))
+app.use("/api/", require("./routesem/pedidos"))
+app.use("/api/", require("./routesco/historial"))
 /*app.use("/api/", require("./routesem/comprador")) 
 app.use("/api/", require("./routesem/empresas")) */
 
