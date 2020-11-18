@@ -12,12 +12,18 @@ app.get('/',(req,res) => {
     res.send('Servidor Rohstoffe equipo 5 Activo');
 });
 
+app.get('/api',(req,res)=>{
+  res.send("Esto es un /api !!")
+})
+
 app.use("/api/", require("./routesco/inicio"))
 app.use("/api/", require("./routesco/carrito"))
 app.use("/api/", require("./routesem/agregar"))
 app.use("/api/", require("./routesem/productos"))
 app.use("/api/", require("./routesem/pedidos"))
 app.use("/api/", require("./routesco/historial"))
+app.use("/api/", require("./routeslog/inisesion"))
+app.use("/api/", require("./routeslog/registro"))
 /*app.use("/api/", require("./routesem/comprador")) 
 app.use("/api/", require("./routesem/empresas")) */
 
