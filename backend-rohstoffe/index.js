@@ -2,12 +2,12 @@ const express = require('express');
 const path = require("path");
 const morgan = require("morgan");
 const app = express();
+const cors = require("cors");
 
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.static('public'))
-
-
+app.use(cors({origin: '*'}));
 app.get('/',(req,res) => {
     res.send('Servidor Rohstoffe equipo 5 Activo');
 });

@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const app = express();
 
 app.get('/', function(req,res){
@@ -7,4 +7,4 @@ app.get('/', function(req,res){
 app.listen(6057, function(){
     console.log("El servidor está en uso.");
 });
-
+*/
