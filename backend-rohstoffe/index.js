@@ -24,6 +24,7 @@ app.use("/api/", require("./routesem/pedidos"))
 app.use("/api/", require("./routesco/historial"))
 app.use("/api/", require("./routeslog/inisesion"))
 app.use("/api/", require("./routeslog/registro"))
+app.use("/api/", require("./routesco/favoritos"))
 /*app.use("/api/", require("./routesem/comprador")) 
 app.use("/api/", require("./routesem/empresas")) */
 
