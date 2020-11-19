@@ -1,11 +1,11 @@
 {
   "version": 2,
   "name": "api-fake-mediatecapp",
-  "builds": [{ "src": "/index.js", "use": "@now/node-server" }],
+  "builds": [{ "src": "index.js", "use": "@now/node-server" }],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/backend-rohstoffe/index.js"
+      "dest": "/index.js"
     }
   ]
 }
