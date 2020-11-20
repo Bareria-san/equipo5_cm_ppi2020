@@ -3,6 +3,7 @@ const path = require("path");
 const morgan = require("morgan");
 const app = express();
 const cors = require("cors");
+require('dotenv').config()
 
 app.use(morgan('dev'))
 app.use(express.json())
@@ -28,8 +29,8 @@ app.use("/api/", require("./routesco/favoritos"))
 /*app.use("/api/", require("./routesem/comprador")) 
 app.use("/api/", require("./routesem/empresas")) */
 
-app.set("puerto", 3000)
+app.set('port',process.env.PORT || 5000);
 
-app.listen(app.get("puerto"), () => {
-  console.log(`Servidor Rohstoffe corriendo en el puerto ${app.get("puerto")}`)
+app.listen(app.get("port"), () => {
+  console.log(`Servidor Rohstoffe corriendo en el puerto ${app.get("port")}`)
 })
