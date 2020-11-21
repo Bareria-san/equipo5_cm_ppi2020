@@ -1,36 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
+import axios from 'axios';
 import Layout from '../components/Layout';
 
-window.onload = function () {
-    // Variables
-    let baseDeDatos = [
-        {
-            id: 1,
-            nombre: 'Lacoste Red',
-            precio: 10000,
-            imagen: 'https://es.swedishface.com/image/cache/data/lacoste/lacoste-eau-de-lacoste-red-edt-100ml-900x900.jpg'
-        },
-        {
-            id: 2,
-            nombre: 'One Million',
-            precio: 10000,
-            imagen: 'https://es.swedishface.com/image/cache/data/paco-rabanne/paco-rabanne-1-million-edt-100ml-900x900.jpg'
-        },
-        {
-            id: 3,
-            nombre: 'Ck One',
-            precio: 16000,
-            imagen: 'https://cdn.shopify.com/s/files/1/0050/9761/9505/products/perfume-ck-one-unisex-de-calvin-klein-200ml-803408_1200x1200.jpg?v=1601488606'
-        },
-        {
-            id: 4,
-            nombre: 'Invictus',
-            precio: 28000,
-            imagen: 'https://www.724usa.com/paco-rabanne-invictus-legend-edt-100-ml-for-men-perfume-original-tester-perfume-men-fragrances-paco-rabanne-724usacom-men-women-clothing-shoes-accessories-online-shopping-475345-43-B.jpg'
+function Carrito() {
+    const [baseDeDatos, setBaseDeDatos] = useState([]);
+    const [conteo, setConteo] = useState(0);
+    //let baseDeDatos=[];
+    function informacion() {
+        if (conteo == 0) {
+            setConteo(1);
+            axios.get('https://backend-rohstoffe.herokuapp.com/api/productos')
+                .then(function ({ data }) {
+                    // se ejecuta siempre que la llamada sea exitosa
+                    //baseDeDatos = data;
+                    
+                        setBaseDeDatos(data);
+                        console.log(data);
+                        
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                });
         }
 
-    ]
+    }
+    useEffect(function () {
+        informacion();
+    }, [baseDeDatos])
     let $items = document.querySelector('#items');
     let carrito = [];
     let total = 0;
@@ -52,20 +50,20 @@ window.onload = function () {
             // Titulo
             let miNodoTitle = document.createElement('h5');
             miNodoTitle.classList.add('card-title');
-            miNodoTitle.textContent = info['nombre'];
+            miNodoTitle.textContent = info['nombre_producto'];
             // Imagen
             let miNodoImagen = document.createElement('img');
             miNodoImagen.classList.add('img-fluid');
-            miNodoImagen.setAttribute('src', info['imagen']);
+            miNodoImagen.setAttribute('src', info['imagen_producto']);
             // Precio
             let miNodoPrecio = document.createElement('p');
             miNodoPrecio.classList.add('card-text');
-            miNodoPrecio.textContent = '$' + info['precio'];
+            miNodoPrecio.textContent = '$' + info['valor_unidad'];
             // Boton 
             let miNodoBoton = document.createElement('button');
             miNodoBoton.classList.add('btn', 'btn-secondary');
             miNodoBoton.textContent = '+';
-            miNodoBoton.setAttribute('marcador', info['id']);
+            miNodoBoton.setAttribute('marcador', info['id_producto']);
             miNodoBoton.addEventListener('click', anyadirCarrito);
             // Insertamos
             miNodoCardBody.appendChild(miNodoImagen);
@@ -100,7 +98,7 @@ window.onload = function () {
         carritoSinDuplicados.forEach(function (item, indice) {
             // Obtenemos el item que necesitamos de la variable base de datos
             let miItem = baseDeDatos.filter(function (itemBaseDatos) {
-                return itemBaseDatos['id'] == item;
+                return itemBaseDatos['id_producto'] == item;
             });
             // Cuenta el número de veces que se repite el producto
             let numeroUnidadesItem = carrito.reduce(function (total, itemId) {
@@ -109,7 +107,7 @@ window.onload = function () {
             // Creamos el nodo del item del carrito
             let miNodo = document.createElement('li');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0]['nombre']} - $ ${miItem[0]['precio']}`;
+            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0]['nombre_producto']} - $ ${miItem[0]['valor_unidad']}`;
             // Boton de borrar
             let miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');
@@ -144,9 +142,9 @@ window.onload = function () {
         for (let item of carrito) {
             // De cada elemento obtenemos su precio
             let miItem = baseDeDatos.filter(function (itemBaseDatos) {
-                return itemBaseDatos['id'] == item;
+                return itemBaseDatos['id_producto'] == item;
             });
-            total = total + miItem[0]['precio'];
+            total = total + miItem[0]['valor_unidad'];
         }
 
         // Renderizamos el precio 
@@ -169,62 +167,56 @@ window.onload = function () {
     // Inicio
     renderItems();
 
-
-}
-
-class Carrito extends React.Component {
-    render() {
-        return (
-            <div className="container-fluid">
-                <div className="row">
-                    <Layout />
-                    <div className="letra">
-                        <h4>.</h4>
-                        <div class="row justify-content-center justify-content-md-start">
-                            <h1 class="display-5">Carrito de compra</h1>
-                        </div>
+    return (
+        <div className="container-fluid">
+            <div className="row">
+                <Layout />
+                <div className="letra">
+                    <h4>.</h4>
+                    <div class="row justify-content-center justify-content-md-start">
+                        <h1 class="display-5">Carrito de compra</h1>
                     </div>
-                    <main id="items" class="col-sm-8 row"></main>
+                </div>
+                <main id="items" class="col-sm-8 row"></main>
 
-                    <aside class="col-sm-5">
-                        <h2>Facturación</h2>
+                <aside class="col-sm-5">
+                    <h2>Facturación</h2>
 
-                        <ul id="carrito" class="list-group"></ul>
-                        <p class="text-right">Total: $ <span id="total"></span></p>
+                    <ul id="carrito" class="list-group"></ul>
+                    <p class="text-right">Total: $ <span id="total"></span></p>
 
-                        <div className="col-13 d-flex justify-content-center">
+                    <div className="col-13 d-flex justify-content-center">
 
-                            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-                            <button id="boton-continuar" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-                                Continuar</button>
+                        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                        <button id="boton-continuar" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                            Continuar</button>
 
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">¿Continuar?</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">¿Está seguro de que desea continuar?
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">¿Continuar?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">¿Está seguro de que desea continuar?
 
                                             </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                            <a href="/carritop"> <button type="button" class="btn btn-primary">Continuar</button></a>
-                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                        <a href="/carritop"> <button type="button" class="btn btn-primary">Continuar</button></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </aside>
-                    <h1>.</h1>
-                </div>
+                    </div>
+                </aside>
+                <h1>.</h1>
             </div>
+        </div>
 
 
-        );
-    }
+    );
 }
 export default Carrito;
