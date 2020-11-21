@@ -1,8 +1,38 @@
 import Layout2 from '../components/Layout2'
 import React, { Component } from 'react';
 import '../App.css';
+import axios from 'axios';
 
 class Añadir extends Component {
+    constructor(props) {
+        super(props);
+        axios.post('https://backend-rohstoffe.herokuapp.com/api/productos', 
+        this.state = {
+            nombre_producto: '',
+            stock: '',
+            valor_unidad: ''
+          })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+    
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+    
+      handleChange(event) {
+        this.setState({producto: event.target.nombre_producto});
+        this.setState({cantidad: event.target.stock});
+        this.setState({valor: event.target.valor_producto});
+      }
+    
+      handleSubmit(event) {
+        alert('A name was submitted: ' + this.state.nombre_producto);
+        event.preventDefault();
+      }
     render() {
         return (
             <body>
@@ -15,23 +45,23 @@ class Añadir extends Component {
                         </div>
                         <div className="col-12 d-flex justify-content-center">
                             <div className="form">
-                                <form>
+                                <form onSubmit={this.handleSubmit}> 
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label for="formGroupExampleInput">Nombre Producto</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Lacoste Red"></input>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Lacoste Red" producto={this.state.nombre_producto}></input>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label for="formGroupExampleInput">Stock</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="40 Unidades"></input>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="40 Unidades" cantidad={this.state.stock}></input>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label for="formGroupExampleInput">Valor Unidad</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="$30.000"></input>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="$30.000" valor={this.state.valor_unidad}></input>
                                         </div>
                                     </div>
                                     <div class="form-group">
