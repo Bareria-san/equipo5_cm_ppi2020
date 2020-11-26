@@ -9,8 +9,9 @@ class Añadir extends Component {
         axios.post('https://backend-rohstoffe.herokuapp.com/api/productos', 
         this.state = {
             nombre_producto: '',
-            stock: '',
-            valor_unidad: ''
+            stock: '30',
+            valor_unidad: '30000',
+            imagen_producto: '10000'
           })
           .then(function (response) {
             console.log(response);
@@ -27,6 +28,7 @@ class Añadir extends Component {
         this.setState({producto: event.target.nombre_producto});
         this.setState({cantidad: event.target.stock});
         this.setState({valor: event.target.valor_producto});
+        this.setState({imagen: event.target.imagen_producto});
       }
     
       handleSubmit(event) {
@@ -48,32 +50,37 @@ class Añadir extends Component {
                                 <form onSubmit={this.handleSubmit}> 
                                     <div class="form-group">
                                         <div class="form-group">
-                                            <label for="formGroupExampleInput">Nombre Producto</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Lacoste Red" producto={this.state.nombre_producto}></input>
+                                            <label for="nombre_producto">Nombre Producto</label>
+                                            <input type="text" class="form-control" id="nombre_producto" name="producto" placeholder="Lacoste Red" name={this.state.nombre_producto}></input>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-group">
-                                            <label for="formGroupExampleInput">Stock</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="40 Unidades" cantidad={this.state.stock}></input>
+                                            <label for="cantidad">Stock</label>
+                                            <input type="text" class="form-control" id="cantidad" placeholder="40 Unidades" name={this.state.stock}></input>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-group">
-                                            <label for="formGroupExampleInput">Valor Unidad</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="$30.000" valor={this.state.valor_unidad}></input>
+                                            <label for="valor">Valor Unidad</label>
+                                            <input type="text" class="form-control" id="valor" placeholder="$30.000" name={this.state.valor_unidad}></input>
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <div class="form-group">
+                                            <label for="imagen">Valor Unidad</label>
+                                            <input type="text" class="form-control" id="imagen" placeholder="$30.000" name={this.state.imagen_producto}></input>
+                                        </div>
+                                    </div>
+                                    {/* <div class="form-group">
                                         <label for="exampleFormControlFile1">Imagen del producto</label>
                                         <input type="file" class="form-control-file" id="exampleFormControlFile1"></input>
-                                    </div>
+                                    </div> */}
+                                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    Añadir</button>
                                 </form>
 
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                    Añadir</button>
-
-
+                                
                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
