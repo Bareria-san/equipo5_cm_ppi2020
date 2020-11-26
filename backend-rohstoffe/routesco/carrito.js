@@ -8,14 +8,15 @@ const JSONCarrito = JSON.parse(FileCarrito)
 router.post('/carritodecompra', (req, res) => {
   try{
     const {
+      productos,
       cantidad,
       valor_total,
       direccion_entrega,
       monto
     } = req.body    
-    const SQL = `INSERT INTO carrito_de_compra(cantidad, valor_total,direccion_entrega, monto)
-                  VALUES(?,?,?,?)`
-    const parametros = [cantidad, valor_total, direccion_entrega, monto]
+    const SQL = `INSERT INTO carrito_de_compra(productos, cantidad,valor_total,direccion_entrega, monto)
+                  VALUES(?,?,?,?,?)`
+    const parametros = [productos, cantidad, valor_total, direccion_entrega, monto]
     connection.query(SQL, parametros, (error, results, fields) => {
       if(error){
         console.log(error)
@@ -24,6 +25,7 @@ router.post('/carritodecompra', (req, res) => {
         console.log(results)
         res.status(201).json({
                               id : results.insertId,
+                              productos: productos,
                               cantidad : cantidad,
                               valor_total : valor_total,
                               direccion_entrega : direccion_entrega,

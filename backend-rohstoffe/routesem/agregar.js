@@ -24,11 +24,10 @@ router.post('/anadirproductos', (req, res) => {
       stock,
       valor_unidad,
       imagen_producto,
-      nombre_empresa
     } = req.body    
-    const SQL = `INSERT INTO productos(nombre_producto, stock,valor_unidad, imagen_producto, nombre_empresa)
-                  VALUES(?,?,?,?,?)`
-    const parametros = [nombre_producto, stock, valor_unidad, imagen_producto, nombre_empresa]
+    const SQL = `INSERT INTO productos (nombre_producto, stock, valor_unidad, imagen_producto) 
+                  VALUES(?,?,?,?)`
+    const parametros = [nombre_producto, stock, valor_unidad, imagen_producto]
     connection.query(SQL, parametros, (error, results, fields) => {
       if(error){
         console.log(error)
@@ -40,8 +39,8 @@ router.post('/anadirproductos', (req, res) => {
                               nombre_producto : nombre_producto,
                               stock : stock,
                               valor_unidad : valor_unidad,
-                              imagen_producto : imagen_producto,
-                              nombre_empresa : nombre_empresa})
+                              imagen_producto : imagen_producto
+                              })
       }
     })
   }catch(error){
