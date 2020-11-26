@@ -7,10 +7,10 @@ const {connection} = require("./../db/mysql_pool")
 
 router.get('perfilco/:id', (req, res) => {
   try{
-    const id = req.params.id
+    const {id} = req.params.id
     connection.query(`SELECT id_comprador, nombre_completo, correo 
                       FROM compradores
-                      WHERE id = ?`, [id])
+                      WHERE id_comprador = ?`, [id])
   }catch(error){
     res.status(503).json({mensaje : "Error en el servidor.", error : true})
   }
