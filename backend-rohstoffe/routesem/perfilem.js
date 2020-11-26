@@ -15,6 +15,8 @@ router.get('/perfilem/:id',(req,res)=>{
     }
   })
 })
+
+//osunaaa
 /*router.get('/perfilem/:id', (req, res) => {
   try{
     const {id} = req.params.id
