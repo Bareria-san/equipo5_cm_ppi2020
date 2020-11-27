@@ -16,7 +16,6 @@ const PerfilEm = () => {
                 <h2 className='sos'>Carlos Ferrer</h2>
                 <h4 className='sos'>Liliperfu@gmial.com</h4>
                 <h4 className='sos'>4444444</h4>
-                <h4 className='sos'>Calle 94 #30-1, Medellín</h4>
                 <h4 className='sos'>Certificado de autenticidad:</h4>
                 <div className='cont'>
                     <img src={Certificado} className='asdasd' alt='Logo' />
