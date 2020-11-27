@@ -55,7 +55,7 @@ const Login = () => {
                     id: 'contraseña',
                     name: 'contraseña',
                     type: 'password',
-                    placeholder: 'Mínimo 5 caracteres'
+                    placeholder: 'Digite su contraseña'
                 }}
                 handleChange={handleChange}
             />
