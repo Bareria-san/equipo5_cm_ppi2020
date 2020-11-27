@@ -6,12 +6,12 @@ import axios from 'axios';
 class Añadir extends Component {
     constructor(props) {
         super(props);
-        axios.post('https://backend-rohstoffe.herokuapp.com/api/productos', 
+        axios.post('https://backend-rohstoffe.herokuapp.com/api/anadirproductos', 
         this.state = {
             nombre_producto: '',
-            stock: '30',
-            valor_unidad: '30000',
-            imagen_producto: '10000'
+            stock: '',
+            valor_unidad: '',
+            imagen_producto: ''
           })
           .then(function (response) {
             console.log(response);
@@ -51,25 +51,25 @@ class Añadir extends Component {
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label for="nombre_producto">Nombre Producto</label>
-                                            <input type="text" class="form-control" id="nombre_producto" name="producto" placeholder="Lacoste Red" name={this.state.nombre_producto}></input>
+                                            <input type="text" class="form-control" id="nombre_producto" name="producto" placeholder="Lacoste Red" name={this.state.nombre_producto} onChange={this.handleChange}></input>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label for="cantidad">Stock</label>
-                                            <input type="text" class="form-control" id="cantidad" placeholder="40 Unidades" name={this.state.stock}></input>
+                                            <input type="text" class="form-control" id="cantidad" placeholder="40 Unidades" name={this.state.stock}onChange={this.handleChange} ></input>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label for="valor">Valor Unidad</label>
-                                            <input type="text" class="form-control" id="valor" placeholder="$30.000" name={this.state.valor_unidad}></input>
+                                            <input type="text" class="form-control" id="valor" placeholder="$30.000" name={this.state.valor_unidad} onChange={this.handleChange} ></input>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-group">
-                                            <label for="imagen">Valor Unidad</label>
-                                            <input type="text" class="form-control" id="imagen" placeholder="$30.000" name={this.state.imagen_producto}></input>
+                                            <label for="imagen">imagen</label>
+                                            <input type="text" class="form-control" id="imagen" placeholder="$30.000" name={this.state.imagen_producto} onChange={this.handleChange}></input>
                                         </div>
                                     </div>
                                     {/* <div class="form-group">
