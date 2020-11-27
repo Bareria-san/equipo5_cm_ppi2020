@@ -16,9 +16,9 @@ connection.query(newcompra, datacompra, (err, results, fields)=>{
 })
 
 router.post('/loginem',(req,res)=>{
-const {nombre_empresa,nombre_propetario, correo_empresa, contrasena_empresa, telefono} = req.body;
-let dataempresa = [nombre_empresa,nombre_propetario, correo_empresa, contrasena_empresa, telefono];
-let newempresa = 'INSERT INTO empresas(nombre_empresa,nombre_propetario, correo_empresa, contrasena_empresa, telefono) VALUES (?,?,?,?,?)';
+const {nombre_empresa, correo_empresa, contrasena_empresa, telefono} = req.body;
+let dataempresa = [nombre_empresa, correo_empresa, contrasena_empresa, telefono];
+let newempresa = 'INSERT INTO empresas(nombre_empresa, correo_empresa, contrasena_empresa, telefono) VALUES (?,?,?,?)';
 connection.query(newempresa, dataempresa, (err, results, fields)=>{
   if(err){
     return console.error(err.message)
