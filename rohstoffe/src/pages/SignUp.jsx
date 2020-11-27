@@ -46,7 +46,7 @@ const SignUp  = () => {
         handleChange={handleChange}
         />
 
-        <Label text= 'Correo electronico' />
+        <Label text= 'Correo electrónico' />
         <Input 
         attribute={{
             id: 'usuario',
