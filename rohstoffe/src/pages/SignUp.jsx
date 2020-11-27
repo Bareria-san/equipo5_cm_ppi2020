@@ -70,7 +70,7 @@ const SignUp  = () => {
         <Input 
         attribute={{
             id: 'Confirm-contraseña',
-            name: 'Rcontraseña',
+            name: 'contraseña',
             type: 'password',
             placeholder: 'Digite nuevamente su contraseña'
         }}
