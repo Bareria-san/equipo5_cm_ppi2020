@@ -14,7 +14,7 @@ const PerfilEm = () => {
                 </div>
                 <h1 className='display-5'>Lili Perfumeria</h1>
                 <h2 className='sos'>Carlos Ferrer</h2>
-                <h4 className='sos'>Liliperfu@gmial.com</h4>
+                <h4 className='sos'>Liliperfu@gmail.com</h4>
                 <h4 className='sos'>4444444</h4>
                 <h4 className='sos'>Certificado de autenticidad:</h4>
                 <div className='cont'>
