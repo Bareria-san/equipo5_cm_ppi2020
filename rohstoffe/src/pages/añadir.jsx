@@ -50,33 +50,33 @@ class Añadir extends Component {
                                 <form onSubmit={this.handleSubmit}> 
                                     <div class="form-group">
                                         <div class="form-group">
-                                            <label for="nombre_producto">Nombre Producto</label>
-                                            <input type="text" class="form-control" id="nombre_producto" name="producto" placeholder="Lacoste Red" name={this.state.nombre_producto} onChange={this.handleChange}></input>
+                                            <label>Nombre Producto</label>
+                                            <input type="text" class="form-control" placeholder="Lacoste Red" producto={this.state.nombre_producto} onChange={this.handleChange}></input>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-group">
-                                            <label for="cantidad">Stock</label>
-                                            <input type="text" class="form-control" id="cantidad" placeholder="40 Unidades" name={this.state.stock}onChange={this.handleChange} ></input>
+                                            <label>Stock</label>
+                                            <input type="text" class="form-control" placeholder="40 Unidades" cantidad={this.state.stock}onChange={this.handleChange} ></input>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-group">
-                                            <label for="valor">Valor Unidad</label>
-                                            <input type="text" class="form-control" id="valor" placeholder="$30.000" name={this.state.valor_unidad} onChange={this.handleChange} ></input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-group">
-                                            <label for="imagen">imagen</label>
-                                            <input type="text" class="form-control" id="imagen" placeholder="$30.000" name={this.state.imagen_producto} onChange={this.handleChange}></input>
+                                            <label>Valor Unidad</label>
+                                            <input type="text" class="form-control" placeholder="$30.000" valor={this.state.valor_unidad} onChange={this.handleChange} ></input>
                                         </div>
                                     </div>
                                     {/* <div class="form-group">
+                                        <div class="form-group">
+                                            <label>imagen</label>
+                                            <input type="text" class="form-control" placeholder="$30.000" imagen={this.state.imagen_producto} onChange={this.handleChange}></input>
+                                        </div>
+                                    </div> */}
+                                    <div class="form-group">
                                         <label for="exampleFormControlFile1">Imagen del producto</label>
                                         <input type="file" class="form-control-file" id="exampleFormControlFile1"></input>
-                                    </div> */}
-                                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    </div> 
+                                    <button type="submit" class="btn btn-primary" producto="Submit" data-toggle="modal" data-target="#exampleModal">
                                     Añadir</button>
                                 </form>
 

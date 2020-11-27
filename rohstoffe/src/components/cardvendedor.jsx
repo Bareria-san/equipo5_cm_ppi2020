@@ -3,6 +3,9 @@ import '../App.css';
 
 export default class Cardvendedor extends Component {
   render() {
+    fetch('https://backend-rohstoffe.herokuapp.com/api/productos')
+  .then(response => response.json())
+  .then(data => console.log(data));
     return (
       <>
         {this.props.data.map((element) => (
