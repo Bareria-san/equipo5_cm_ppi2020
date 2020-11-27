@@ -55,6 +55,16 @@ const Registroem = () => {
         }}
         handleChange={handleChange}
         />
+        <Label text= 'Número telefónico*' />
+        <Input 
+        attribute={{
+            id: 'usuario',
+            name: 'usuario',
+            type: 'text',
+            placeholder: 'Número de teléfono'
+        }}
+        handleChange={handleChange}
+        />
         <Label text= 'Contraseña*' />
         <Input 
         attribute={{
