@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import Layout2 from "../components/Layout2";
+import Layout from "../components/Layout";
 
 
 class Carritop extends React.Component {
@@ -75,7 +75,7 @@ class Carritop extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <Layout2 />
+          <Layout />
 
           <div className="col-4 justify-content-center" id="Bloque_inicio">
             <h1 className="text-center mt-5" id="Texto_inicio">
@@ -83,17 +83,7 @@ class Carritop extends React.Component {
             </h1>
             <br />
             <form onSubmit={this.handleSubmit}>
-              <div className="form-group">
-                <label className="inputEmail">Nombre Completo</label>
-                <input
-                id="nombre" 
-                name="nombre" 
-                type="text" 
-                placeholder="Ingrese el Nombre" 
-                        value={this.state.nombre} onChange={this.handleChangeInput}                     className="form-control"
-        
-                />
-              </div>
+
               <div className="form-group">
                 <label className="inputEmail">Dirección</label>
                 <input

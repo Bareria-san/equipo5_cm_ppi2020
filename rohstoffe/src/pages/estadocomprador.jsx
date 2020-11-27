@@ -17,7 +17,7 @@ class EstadoComprador extends React.Component {
                         <div class="col-12 d-flex justify-content-center">
                             <h1 class="display-5">Estado de las entregas</h1>
                         </div>
-                    </div>
+                    
                     
                     {/* <div className="col-lg-4 col-md-6 col-sm-12">
                         <div className="card mx-4" style={{ width: '16rem' }}>
@@ -44,12 +44,13 @@ class EstadoComprador extends React.Component {
                         </div>
                     </div> */}
                     
-                    <div className="mx-auto">
-                            <table className="table col-12"><tr>
-                                <td><img src={Icono1} width="100px" alt="Validacion"></img><h4>Validación</h4></td>
-                                <td><img src={Icono2} width="100x"/><h4>Preparación</h4></td>
-                                <td><img src={Icono3} width="100x"alt="Entrega" ></img><h4>Entregado</h4></td>
+                    <div className="container">
+                            <table className="table col-1"><tr>
+                                <td><img src={Icono1} width="100px" ></img><h4>Validación</h4></td>
+                                <td><img src={Icono2} width="100px"/><h4>Preparación</h4></td>
+                                <td><img src={Icono3} width="100px" ></img><h4>Entregado</h4></td>
                             </tr></table>
+                        </div>
                         </div>
                 </div>
                 
