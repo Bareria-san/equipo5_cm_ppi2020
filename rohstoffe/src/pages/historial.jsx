@@ -25,7 +25,7 @@ const Historial = () => {
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
-          Comprada el 26/01/2020
+          Precio:
           <button className= 'volveracomprar'>
            Volver a comprar
        </button>
@@ -61,7 +61,7 @@ const Historial = () => {
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
       <div class="card-body">
-          Comprada el 10/09/2020
+          Precio:
       <button className= 'volveracomprar'>
            Volver a comprar
        </button>
